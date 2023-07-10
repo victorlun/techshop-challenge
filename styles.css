@@ -41,8 +41,10 @@ body {
   
   section {
     margin-bottom: 30px;
-    background-color: #d9dbdb;
-    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #949494b0;
+    padding: 30px;
     border-radius: 5px;
   }
   
@@ -67,7 +69,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: #333;
-    color: #fff;
+    color: #eeeeee;
     text-decoration: none;
     border-radius: 5px;
   }
@@ -84,14 +86,14 @@ body {
     padding: 20px;
     width: 300px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #921e1e;
   }
   
   .text-field {
-    margin-left: 20px;
-    width: 50%;
+    margin-left: 50px;
+    width: 70%;
     padding: 10px;
-    border: 20px solid #ccc;
+    border: 20px solid #c5c5c5;
     border-radius: 10px;
     text-align: left;
   }
@@ -153,4 +155,12 @@ body {
   width: 128px;
   height: 128px;
   object-fit: cover;
+  margin-left: 50px;
+}
+.header {
+  margin-left: 50px;
+}
+h4{
+  text-align: left;
+  margin-left: 100px;
 }
