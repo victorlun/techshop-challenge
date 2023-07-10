@@ -1,0 +1,156 @@
+/* Add your CSS styles here */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e7e5e5;
+  }
+  
+  header {
+    background-color: #4d4a4a;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+    background-color: #d9dbdb;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    line-height: 1.5;
+
+  }
+
+  .p2 {
+    line-height: 1.0;
+    text-align: left;
+    margin-left: 200px;
+    height: maxt;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: #4d4a4a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .box {
+    border: 1px solid #bd0b0b;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+  }
+  
+  .text-field {
+    margin-left: 20px;
+    width: 50%;
+    padding: 10px;
+    border: 20px solid #ccc;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .picture-placeholder {
+    border: 1px dashed #ccc;
+    height: 200px;
+    width: 50%;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .picture-placeholder p {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+  }
+  select {
+  appearance: inherit;
+  background-color: white;
+  border: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 0 1em 0 0;
+  margin: 15px;
+  width: 150%;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: inherit;
+  line-height: 20px;
+  
+}
+.flex-container {
+  display:flex;
+  justify-content: space-between;
+  align-items: left;
+  width: 100%;
+  height: 200px; 
+}
+
+
+.flex-item {
+  width: 20%;
+}
+.flex-item:nth-child(2) {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex-item:nth-child(3) {
+  width: 100%;
+}
+#pic {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+}

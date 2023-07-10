@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tech Shop Challenge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tech Shop Challenge</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Laptops</h2>
+            <p></p>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <select name="laptops" id="laptops" multiple size="6"></select>
+                </div>
+                <div class="flex-item">
+                    <h1 id="laptop-title"></h1>
+                    <img id="pic" src="" alt="No picture avalible" width="128" height="128">
+                </div>
+                <div class="flex-item">
+                    <p class="text-field" id="laptop-info"></p>
+                </div>
+            </div>
+            <a href="#" class="button" id = "buy-btn">Buy Now</a>
+        </section>
+        
+
+        <section>
+            <h2>Bank</h2>
+            <p>Balance: 
+            <b id = "balance"></b>
+            <b>  SEK</b>
+            </p>
+            <p2 id="debt"></p2>
+            <br>
+            <a href="#" class="button" id= "loan-btn">Loan</a>
+            <a href="#" class="button" id= "repay-btn">Repay Loan</a>
+        </section>
+
+        <section>
+            <h2>Work</h2>
+            <p>Pay: 
+            <b id = "pay"></b>
+            <b> SEK</b>
+            </p>
+            <br>
+            <a href="#" class="button" id= "bank-btn">Bank</a>
+            <a href="#" class="button" id="work-btn">Work</a>
+        </section>
+    </main>
+
+    <footer>
+        <p> </p>
+    </footer>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
