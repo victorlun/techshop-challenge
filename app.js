@@ -44,6 +44,10 @@ function initLoan(){
 }
 function repayLoan(){
     let payOffAmount = prompt(`How much do you want to pay off? Your current loan amount is ${bank.getDebt()} and your balance is ${bank.getBalance()}`)
+    while(!payOffAmount || isNaN(payOffAmount)){
+    payOffAmount = prompt(`How much do you want to pay off? Your current loan amount is ${bank.getDebt()} and your balance is ${bank.getBalance()}`)
+    }
+
     while(payOffAmount > bank.getDebt()){
         payOffAmount = prompt(`You can't repay more than you owe! Your current loan amount is ${bank.getDebt()} and your balance is ${bank.getBalance()}`)
     }
