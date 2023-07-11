@@ -29,31 +29,39 @@ bank.updateLoanElements()
 
 payElement.textContent = work.getPay()
 
-//BANK
 function initLoan(){
     let loanAmount = prompt("Get a loan")
     while (isNaN(loanAmount) || (!loanAmount) || loanAmount == "")
         loanAmount = prompt("Get a loan, but please enter a number.  To cancel, enter '0' ")
     while (loanAmount  > (bank.getBalance() * 2))
        loanAmount = prompt("You can't loan more than 2x your balance. Enter a new loan.")
-
-    bank.increaseDebt(parseInt(loanAmount))
+    if(bank.getDebt() > 0){
+        alert("You already have a loan, pay that back in full to apply for a new loan!")
+    }
+    else {
+        bank.increaseDebt(parseInt(loanAmount))
     bank.deposit(parseInt(loanAmount))
 
-
+    }
 }
 function repayLoan(){
-    let payOffAmount = prompt(`How much do you want to pay off? Your current loan amount is ${bank.getDebt()} and your balance is ${bank.getBalance()}`)
-    while(!payOffAmount || isNaN(payOffAmount)){
-    payOffAmount = prompt(`How much do you want to pay off? Your current loan amount is ${bank.getDebt()} and your balance is ${bank.getBalance()}`)
+    if(work.getPay() === 0){
+        alert("You don't have any money to pay back your loan with, work a little! ⚡") 
     }
-
-    while(payOffAmount > bank.getDebt()){
-        payOffAmount = prompt(`You can't repay more than you owe! Your current loan amount is ${bank.getDebt()} and your balance is ${bank.getBalance()}`)
+    else if (work.getPay() >= bank.getDebt()){
+        let remainder = work.getPay() - bank.getDebt()
+        work.setPay(0)
+        bank.decreaseDebt(bank.getDebt())
+        bank.deposit(remainder)
+        bank.updateLoanElements()
     }
-    bank.decreaseDebt(parseInt(payOffAmount))
-    bank.withdraw(parseInt(payOffAmount))
+    else {
+        bank.decreaseDebt(work.getPay())
+        work.setPay(0)
+        bank.updateLoanElements()
+    }
 }
+
 //WORK
 function bankMoney(){
     if(bank.getDebt() > 0){
@@ -97,7 +105,7 @@ function showLaptop() {
         laptopTitleElement.innerText = selectedLaptop.title
         
         laptopInfoElement.innerHTML = "<b>" + "Description: " + "</b>" + selectedLaptop.description + "<br>" + "<b>" + "Price: " + "</b>" +
-        selectedLaptop.price + "<br>" + "<b>" + "Specs: " + "</b>" + selectedLaptop.specs
+        selectedLaptop.price +" SEK" + "<br>" + "<b>" + "Specs: " + "</b>" + selectedLaptop.specs
 }
 function buyComputer(){
     const selectedLaptopId = Number(laptopElement.value)
