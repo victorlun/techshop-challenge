@@ -2,7 +2,7 @@ const payElement = document.getElementById("pay")
 
 let pay = 0
 
-const increasePay = () => {pay += 200
+const increasePay = () => {pay += 100
     payElement.textContent = pay;
 }
 
