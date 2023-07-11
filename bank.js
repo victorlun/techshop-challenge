@@ -20,7 +20,6 @@ const withdraw = amount => {
 const getBalance = () => {
     balanceElement.textContent = balance
     return balance
-    
 }
 
 const increaseDebt = (amount) => {
@@ -33,13 +32,18 @@ const decreaseDebt = (amount) => {debt -= amount
     debtElement.innerHTML = "Debt: " +"<b>" + debt +" SEK" + "</b>"
     updateLoanElements()
 }
+const setDebt = (amount) => {
+debt = amount
+updateLoanElements()
+}
 
 const getDebt = () => {return debt}
 
 function updateLoanElements() {  
-    if (getDebt() == 0) {
+    if (getDebt() <= 0) {
       repayButtonElement.style.display = 'none'
       debtElement.style.display = 'none'
+      
     } else {
       repayButtonElement.style.display = 'inline'
       debtElement.style.display = 'inline'
@@ -59,7 +63,8 @@ const bank = {
     decreaseDebt,
     getDebt,
     updateLoanElements,
-    initBankElements
+    initBankElements,
+    setDebt
 }
 
 export default bank
