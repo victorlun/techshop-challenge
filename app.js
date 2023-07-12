@@ -75,7 +75,7 @@ function bankMoney(){
     }
 }
   function selectFirstOption() {
-    laptopElement.selectedIndex = 5
+    laptopElement.selectedIndex = 1
     showLaptop()
   }
 
